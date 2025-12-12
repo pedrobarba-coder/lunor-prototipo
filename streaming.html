@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilo_streaming.css" id="troca">
+    <link rel="icon" href="imagens/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="scripts/script_streaming.js" defer></script>
+    <title>Lunor - Sua Plataforma de Streaming Premium</title>
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="imagens/logo.png" alt="logo" class="logo-icon" style="border-radius: 20px;">
+                <h1>Lunor</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link ativo">Início</a></li>
+                <li><a href="#continuar" class="nav-link">Continuar Assistindo</a></li>
+                <li><a href="#recomendacoes" class="nav-link">Para Você</a></li>
+                <li><a href="#categorias" class="nav-link">Explorar</a></li>
+                <li><a href="login.html" class="nav-link">Entrar</a></li>
+                <li>
+                    <button id="tema" aria-label="Alternar tema">
+                        <span id="tema-icon">🌙</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="buscar-btn" aria-label="Buscar conteúdo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="busca-container" class="busca-oculta">
+        <div class="busca-content">
+            <input type="text" id="busca-input" placeholder="Buscar filmes, séries, documentários...">
+            <button id="fechar-busca">✕</button>
+        </div>
+    </div>
+
+    <section id="inicio" class="hero">
+        <div class="hero-gradient">
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">NOVO EPISÓDIO</span>
+            <h2 class="hero-title">Stranger Things</h2>
+            <p class="hero-description">
+                Quando um garoto desaparece, a cidade toda participa nas buscas. 
+                Mas o que encontram são segredos, forças sobrenaturais e uma menina misteriosa.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Assistir Agora
+                </button>
+                <button class="btn-secondary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    Minha Lista
+                </button>
+            </div>
+            <div class="hero-info">
+                <span class="info-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    8.7
+                </span>
+                <span class="info-item">4 Temporadas</span>
+                <span class="info-item">2016</span>
+                <span class="info-item">Ficção Científica</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="barra_progresso"></div>
+
+    <main id="conteudo">
+
+        <section id="continuar" class="content-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Continuar Assistindo</h2>
+                    <p class="section-subtitle">Retome de onde parou</p>
+                </div>
+            </div>
+            <div class="cards-scroll">
+                <div class="card card-continuar">
+                    <div class="card-image">
+                        <img src="https://i.ebayimg.com/images/g/PpcAAOSw2qdi1CWb/s-l1200.jpg" alt="Breaking Bad" class="poster-clickable">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Breaking Bad</h3>
+                        <p class="card-meta">T2 E5 • 35 min restantes</p>
+                    </div>
+                </div>
+
+                <div class="card card-continuar">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZjQwYzBlYzUtZjhhOS00ZDQ0LWE0NzAtYTk4MjgzZTNkZWEzXkEyXkFqcGc@._V1_.jpg" alt="The Office" class="poster-clickable">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Office</h3>
+                        <p class="card-meta">T3 E12 • 18 min restantes</p>
+                    </div>
+                </div>
+
+                <div class="card card-continuar">
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/5/0/507720201013-uau-posters-series-seriado-dark-1.jpg" alt="Dark" class="poster-clickable">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Dark</h3>
+                        <p class="card-meta">T1 E8 • 8 min restantes</p>
+                    </div>
+                </div>
+
+                <div class="card card-continuar">
+                    <div class="card-image">
+                        <img src="https://i5.walmartimages.com/asr/1fb90635-6949-437f-97c3-4fc66b066141.d84ee287c4492942bfa0631495bb6455.jpeg" alt="Peaky Blinders" class="poster-clickable">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Peaky Blinders</h3>
+                        <p class="card-meta">T2 E3 • 28 min restantes</p>
+                    </div>
+                </div>
+
+                <div class="card card-continuar">
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/cache/1/thumbnail/800x930/9df78eab33525d08d6e5fb8d27136e95/1/8/181120240305-uau-posters-the-crown-series-1.jpg" alt="The Crown" class="poster-clickable">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 55%"></div>
+                        </div>
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Crown</h3>
+                        <p class="card-meta">T4 E2 • 22 min restantes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recomendacoes" class="content-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Recomendado Para Você Agora</h2>
+                    <p class="section-subtitle">Baseado no seu humor e horário</p>
+                </div>
+            </div>
+            
+            <div class="mood-filter">
+                <button class="mood-btn ativo" data-mood="relaxar">
+                    <span class="mood-icon">😌</span>
+                    <span>Relaxar</span>
+                </button>
+                <button class="mood-btn" data-mood="rir">
+                    <span class="mood-icon">😂</span>
+                    <span>Rir</span>
+                </button>
+                <button class="mood-btn" data-mood="emocionar">
+                    <span class="mood-icon">😢</span>
+                    <span>Emocionar</span>
+                </button>
+                <button class="mood-btn" data-mood="adrenalina">
+                    <span class="mood-icon">🔥</span>
+                    <span>Adrenalina</span>
+                </button>
+                <button class="mood-btn" data-mood="rapido">
+                    <span class="mood-icon">⚡</span>
+                    <span>Rápido</span>
+                </button>
+            </div>
+
+            <div class="cards-scroll" id="mood-content">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/I/81OTLa6h7iL.jpg" alt="Brooklyn Nine-Nine" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Brooklyn Nine-Nine</h3>
+                        <p class="card-meta">Comédia • 22 min</p>
+                        <p class="card-rating">⭐ 8.4</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://img.elo7.com.br/product/zoom/26A89B7/big-poster-serie-friends-lo01-tamanho-90x60-cm-nerd.jpg" alt="Friends" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Friends</h3>
+                        <p class="card-meta">Comédia • 22 min</p>
+                        <p class="card-rating">⭐ 8.9</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-m3pq0536nwm387" alt="Modern Family" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Modern Family</h3>
+                        <p class="card-meta">Comédia • 22 min</p>
+                        <p class="card-rating">⭐ 8.5</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/I/A1A3+sVFjFL._AC_UF894,1000_QL80_.jpg" alt="Parks and Recreation" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Parks and Recreation</h3>
+                        <p class="card-meta">Comédia • 22 min</p>
+                        <p class="card-rating">⭐ 8.6</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNjI3ZGRhNDYtNDFjOS00OGFlLTg4NTEtYjZjYTViY2ZiMzBkXkEyXkFqcGc@._V1_.jpg" alt="The Good Place" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Good Place</h3>
+                        <p class="card-meta">Comédia • 22 min</p>
+                        <p class="card-rating">⭐ 8.2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Em Alta Esta Semana</h2>
+                <p class="section-subtitle">O que todo mundo está assistindo</p>
+            </div>
+            <div class="cards-scroll">
+                <div class="card">
+                    <div class="card-badge top-badge">#1</div>
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/4/8/489020230615-uau-posters-wandinha-wednesday-series-1.jpg" alt="Wednesday" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Wednesday</h3>
+                        <p class="card-meta">Mistério • 8 episódios</p>
+                        <p class="card-rating">⭐ 8.1</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge top-badge">#2</div>
+                    <div class="card-image">
+                        <img src="https://ih1.redbubble.net/image.4723944146.8346/flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg" alt="The Last of Us" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Last of Us</h3>
+                        <p class="card-meta">Drama • 9 episódios</p>
+                        <p class="card-rating">⭐ 8.8</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge top-badge">#3</div>
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/4/0/409320210407-uau-posters-series-seriado-desenho-bojack-horseman.jpg" alt="Succession" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Succession</h3>
+                        <p class="card-meta">Drama • 4 temporadas</p>
+                        <p class="card-rating">⭐ 8.9</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-badge top-badge">#4</div>
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/1/8/180920240305-uau-posters-the-bear-o-urso-series-1.jpg" alt="The Bear" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Bear</h3>
+                        <p class="card-meta">Drama • 2 temporadas</p>
+                        <p class="card-rating">⭐ 8.6</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://acdn-us.mitiendanube.com/stores/004/687/740/products/pos-03554-ea972290fa271b8c3f17181189761395-480-0.jpg" alt="Yellowstone" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Yellowstone</h3>
+                        <p class="card-meta">Drama • 5 temporadas</p>
+                        <p class="card-rating">⭐ 8.7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Ação e Aventura</h2>
+                <a href="#" class="ver-tudo">Ver tudo →</a>
+            </div>
+            <div class="cards-scroll">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/I/81TUfw3vc7L.jpg" alt="The Witcher" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Witcher</h3>
+                        <p class="card-meta">Fantasia • 3 temporadas</p>
+                        <p class="card-rating">⭐ 8.0</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/I/71nFuDgh9fL.jpg" alt="Vikings" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Vikings</h3>
+                        <p class="card-meta">Ação • 6 temporadas</p>
+                        <p class="card-rating">⭐ 8.5</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/b/b6/Jack_Ryan_s%C3%A9rie.jpg" alt="Jack Ryan" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Jack Ryan</h3>
+                        <p class="card-meta">Thriller • 4 temporadas</p>
+                        <p class="card-rating">⭐ 8.0</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://i.redd.it/70pzxynwrldc1.jpeg" alt="Reacher" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Reacher</h3>
+                        <p class="card-meta">Ação • 2 temporadas</p>
+                        <p class="card-rating">⭐ 8.1</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/I/81ak3X4XqGL._AC_UF894,1000_QL80_.jpg" alt="The Boys" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Boys</h3>
+                        <p class="card-meta">Ação • 4 temporadas</p>
+                        <p class="card-rating">⭐ 8.7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Documentários Imperdíveis</h2>
+                <a href="#" class="ver-tudo">Ver tudo →</a>
+            </div>
+            <div class="cards-scroll">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BY2NjNDUzOTgtMDFmNC00ZGQ4LWE5MDctMzczNGVlOGU1N2MyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Planet Earth" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Planet Earth</h3>
+                        <p class="card-meta">Natureza • 11 episódios</p>
+                        <p class="card-rating">⭐ 9.4</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZDE1NzlkNWMtNzFiMC00ZTgxLTgyMmItOTU5OGI2NWQ4MDMxXkEyXkFqcGc@._V1_.jpg" alt="Our Planet" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Our Planet</h3>
+                        <p class="card-meta">Natureza • 8 episódios</p>
+                        <p class="card-rating">⭐ 9.3</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNTc4NjI4NjYyNl5BMl5BanBnXkFtZTgwNzk1NTczNzE@._V1_.jpg" alt="Making a Murderer" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Making a Murderer</h3>
+                        <p class="card-meta">Crime • 2 temporadas</p>
+                        <p class="card-rating">⭐ 8.6</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://static.wixstatic.com/media/f12b6f_1b4c139b04e1437294fcbd03c774893d~mv2.jpg/v1/fill/w_494,h_732,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f12b6f_1b4c139b04e1437294fcbd03c774893d~mv2.jpg" alt="The Social Dilemma" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Social Dilemma</h3>
+                        <p class="card-meta">Tecnologia • 94 min</p>
+                        <p class="card-rating">⭐ 7.6</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://m.media-amazon.com/images/M/MV5BODI0MTE2MDMtZDM2MC00MGM5LTgzOGItMzhlNGViY2U2ODdjXkEyXkFqcGc@._V1_.jpg" alt="Tiger King" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Tiger King</h3>
+                        <p class="card-meta">Crime • 8 episódios</p>
+                        <p class="card-rating">⭐ 7.5</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2 class="section-title">Animações Para Toda Família</h2>
+                <a href="#" class="ver-tudo">Ver tudo →</a>
+            </div>
+            <div class="cards-scroll">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://media.themoviedb.org/t/p/w500/6FMWx79iAtZx8WHtOrRj0VlM8Tp.jpg" alt="Arcane" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Arcane</h3>
+                        <p class="card-meta">Animação • 2 temporadas</p>
+                        <p class="card-rating">⭐ 9.0</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://image.tmdb.org/t/p/original/msWDv3MzBC4cM5fk9B0HgbKiMQ1.jpg" alt="Avatar" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Avatar: A Lenda de Aang</h3>
+                        <p class="card-meta">Animação • 3 temporadas</p>
+                        <p class="card-rating">⭐ 9.3</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://uauposters.com.br/media/catalog/product/2/0/201906131108-uau-posters-series-seriado-desenho-bojack-horseman.jpg" alt="BoJack Horseman" class="poster-clickable">
+                        <div class="card-overlay">
+                            <button class="play-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3>BoJack Horseman</h3>
+                        <p class="card-meta">Animação • 5 temporadas</p>
+                        <p class="card-rating">⭐ 8.7</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal do player de vídeo em tela cheia -->
+    <div id="video-player-modal" class="player-modal">
+        <div class="player-container">
+            <button id="player-close" class="player-close-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+
+            <div class="player-video-container">
+                <div class="player-background"></div>
+                
+                <div class="player-title-info">
+                    <h3 id="player-title">Carregando...</h3>
+                    <div class="player-meta">
+                        <span id="player-episode">Temporada 1 • Episódio 1</span>
+                    </div>
+                </div>
+
+                <div class="player-controls">
+                    <!-- Adicionados novos botões de controle -->
+                    <button class="control-btn rewind-btn" title="Voltar 10s">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+                        </svg>
+                    </button>
+
+                    <button class="control-btn play-pause-btn" title="Play/Pause">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+
+                    <button class="control-btn forward-btn" title="Avançar 10s">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z" transform="rotate(180 12 12)"/>
+                        </svg>
+                    </button>
+
+                    <div class="player-progress">
+                        <span class="time-current">0:00</span>
+                        <div class="progress-bar-player">
+                            <div class="progress-fill-player"></div>
+                        </div>
+                        <span class="time-duration">8:00</span>
+                    </div>
+
+                    <button class="control-btn subtitle-btn" title="Legendas">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V6c0-1.1-.9-2-2-2zm-2 12H4V6h14v10z"/>
+                        </svg>
+                    </button>
+
+                    <button class="control-btn volume-btn" title="Volume">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.31-2.5-4.06v8.12c1.48-.75 2.5-2.29 2.5-4.06zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                        </svg>
+                    </button>
+
+                    <div class="quality-selector">
+                        <button class="control-btn quality-btn" title="Qualidade">
+                            <span>HD</span>
+                        </button>
+                        <div class="quality-menu">
+                            <button class="quality-option active" data-quality="1080p">1080p</button>
+                            <button class="quality-option" data-quality="720p">720p</button>
+                            <button class="quality-option" data-quality="480p">480p</button>
+                        </div>
+                    </div>
+
+                    <button class="control-btn fullscreen-btn" title="Tela Cheia">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu de legendas flutuante -->
+    <div id="subtitle-menu" class="subtitle-menu">
+        <button class="subtitle-option active" data-subtitle="off">Legendas Desativadas</button>
+        <button class="subtitle-option" data-subtitle="pt">Português</button>
+        <button class="subtitle-option" data-subtitle="en">English</button>
+        <button class="subtitle-option" data-subtitle="es">Español</button>
+    </div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="voltar-topo" class="voltar-topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="imagens/logo.png" alt="logo" class="logo-icon" style="border-radius: 20px;">
+                <h2>Lunor</h2>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Sobre</h4>
+                    <a href="#">Sobre a Lunor</a>
+                    <a href="#">Carreiras</a>
+                    <a href="#">Imprensa</a>
+                    <a href="#">Blog</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Comunidade</h4>
+                    <a href="#">Central de Ajuda</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Comunidade</a>
+                    <a href="#">Forum</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Planos</h4>
+                    <a href="#">Plano Básico</a>
+                    <a href="#">Plano Premium</a>
+                    <a href="#">Plano Família</a>
+                    <a href="#">Recursos</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Configurações de Privacidade</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lunor. Todos os direitos reservados.</p>
+                <p class="footer-credits">Desenvolvido com ❤️ por <strong>Lunor Streaming</strong></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
